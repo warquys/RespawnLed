@@ -1,0 +1,64 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<Authors>VT</Authors>
+		<Version>1.0.0</Version>
+	</PropertyGroup>
+
+	<PropertyGroup>
+		<TargetFramework>net48</TargetFramework>
+		<RootNamespace>RespawnLed</RootNamespace>
+		<LangVersion>latest</LangVersion>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<IsPublishable>False</IsPublishable>
+		<SignAssembly>False</SignAssembly>
+		<ErrorReport>prompt</ErrorReport>
+	</PropertyGroup>
+
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+		<CheckForOverflowUnderflow>False</CheckForOverflowUnderflow>
+	</PropertyGroup>
+
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+		<CheckForOverflowUnderflow>False</CheckForOverflowUnderflow>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<None Remove="CassieCommandAttribute.cs~RF83b749b.TMP" />
+		<None Remove="CassieConfig.cs~RF823652e.TMP" />
+		<None Remove="CassieScript.cs~RF8791910.TMP" />
+		<None Remove="CassieScript.cs~RF87ab20f.TMP" />
+		<None Remove="Commands\CassieCommandAttribute.cs~RFc476634.TMP" />
+		<None Remove="EventHandler.cs~RF8a6b3de.TMP" />
+		<None Remove="Patch\HumanBlockingRewardsPatch.cs~RF8aa7654.TMP" />
+		<None Remove="Patch\HumanBlockingRewardsPatch.cs~RF8ad4a83.TMP" />
+		<None Remove="Patch\HumanBlockingRewardsPatch.cs~RF8ae1610.TMP" />
+		<None Remove="Patch\HumanBlockingRewardsPatch.cs~RF8bde202.TMP" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="SynapseSL" Version="3.0.0-pre1.2" />
+		<PackageReference Include="System.Collections.Immutable" Version="7.0.0" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<Using Include=" Neuron.Core.Plugins" />
+		<Using Include="Neuron.Core" />
+		<Using Include="Neuron.Core.Meta" />
+		<Using Include="Neuron.Modules.Commands" />
+		<Using Include="Neuron.Modules.Commands.Command" />
+		<Using Include="Synapse3.SynapseModule" />
+		<Using Include="Synapse3.SynapseModule.Command" />
+		<Using Include="Synapse3.SynapseModule.Config" />
+		<Using Include="Synapse3.SynapseModule.Enums" />
+		<Using Include="Synapse3.SynapseModule.Events" />
+		<Using Include="Synapse3.SynapseModule.Map" />
+		<Using Include="Synapse3.SynapseModule.Map.Rooms" />
+		<Using Include="Synapse3.SynapseModule.Player" />
+		<Using Include="UnityEngine" />
+		<Using Include="UnityEngine.Random">
+			<Alias>Random</Alias>
+		</Using>
+	</ItemGroup>
+
+</Project>
