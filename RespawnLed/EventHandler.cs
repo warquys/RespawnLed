@@ -1,4 +1,5 @@
-﻿using Neuron.Core.Events;
+﻿using MEC;
+using Neuron.Core.Events;
 using Respawning;
 
 namespace RespawnLed;
@@ -20,9 +21,11 @@ public class EventHandler : Listener
         {
             case (uint)SpawnableTeamType.NineTailedFox:
                 ChangeFacilityColor(Color.blue);
+                Timing.CallDelayed(20, () => ChangeFacilityColor(default));
                 break;
             case (uint)SpawnableTeamType.ChaosInsurgency:
                 ChangeFacilityColor(Color.green);
+                Timing.CallDelayed(20, () => ChangeFacilityColor(default));
                 break;
             default:
                 ChangeFacilityColor(default);
